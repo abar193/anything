@@ -1,0 +1,32 @@
+<.flash_group flash={@flash} />
+<section class="section">
+  <h1 class="title">Projects</h1>
+  <h2 class="subtitle">
+    Here you can find my web pages and libraries
+  </h2>
+</section>
+
+<%= for chunk <- Enum.chunk_every(@projects, 3) do %>
+  <div class="columns">
+    <%= for project <- chunk do %>
+      <div class="column is-4">
+        <.project_card
+          name={project.name}
+          description={project.description}
+          logo={project[:logo]}
+          link={project[:link]}
+          source={project[:source]}
+          tags={project[:tags]}
+        />
+      </div>
+    <% end %>
+  </div>
+<% end %>
+<.icon name="hero-x-mark-solid" />
+
+<section class="section">
+  <h1 class="title">About me</h1>
+  <h2 class="subtitle">
+    Programming is my hobby. Software engineering is my job. Will add more later, but if you are interested - my Linkedin profile is always open.
+  </h2>
+</section>
