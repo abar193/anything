@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" style="scrollbar-gutter: stable;">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Developer Portfolio">
+      <%= assigns[:page_title] || "ABAR.LV" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="container">
+    <header class="px-4 sm:px-6 lg:px-8">
+      <.navbar />
+    </header>
+    <%= @inner_content %>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Software engineer portfolio for Anton Bardishev. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <.common_script />
+</html>
