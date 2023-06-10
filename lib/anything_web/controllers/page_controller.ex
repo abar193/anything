@@ -48,9 +48,9 @@ defmodule AnythingWeb.PageController do
         :tags => ["Java", "Helidon SE", "Microstream"],
         :logo => "/images/batman.svg",
         :description => """
-        An open-source cookieless feedback gathering platform for low-traffic blogs. Experimenting with custom agregation functions in postgres.
+        Hackaton submission where I used Microstream to explore corporate ownership structure and find beneficial owners hidden behind layers of proxy companies.
 
-        Project doesn't look like much, but you can see it being used under posts in my blog.
+        The whole project was set in a theme of Batman universe, all so that I could name my main class a "BatMain". Sadly, no one appreciated that joke.
         """
       },
       %{

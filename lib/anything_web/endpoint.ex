@@ -48,12 +48,12 @@ defmodule AnythingWeb.Endpoint do
   plug Plug.Head
   plug Plug.Session, @session_options
   plug AnythingWeb.Router
-  plug :introspect
+  # plug :introspect
 
   def introspect(conn, _opts) do
-    IO.puts """
+    IO.puts("""
     Connection: 
-    """
+    """)
 
     conn
   end
